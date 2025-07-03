@@ -1,0 +1,23 @@
+
+/* I'm a CSS comment! */
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgba(199, 142, 142, 0.921);
+}
+
+header {
+    padding: 10px 15px 20px 25px;
+    background-color: rgb(217, 221, 158);
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: #000000;
+  margin: 0;
+}
+
+header a {
+  color: #608100;
+}
