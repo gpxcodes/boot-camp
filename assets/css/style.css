@@ -1,6 +1,11 @@
 
 /* I'm a CSS comment! */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: rgba(199, 142, 142, 0.921);
@@ -19,5 +24,26 @@ header h1 {
 }
 
 header a {
-  color: #608100;
+  text-decoration: none;
+  color: #000000;
+}
+
+header nav {
+    float: right;
+    margin: 7px 0;
+}
+header nav ul li {
+    display: inline;
+}
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+
+}
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #e22222;
+    display: inline;
 }
