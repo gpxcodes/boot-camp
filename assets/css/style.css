@@ -9,12 +9,12 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: rgba(199, 142, 142, 0.921);
+  background-color: rgba(138, 130, 130, 0.921);
 }
 
 header {
     padding: 10px 15px 20px 25px;
-    background-color: rgb(217, 221, 158);
+    background-color: rgb(237, 247, 94);
 }
 
 header h1 {
@@ -48,8 +48,52 @@ header h1 {
     color: #e22222;
     display: inline;
 }
+.modal {
+    color: rgb(237, 247, 94);
+    height: 400px;
+    position: relative;
+}
+
+.modal-form {
+    width: 500px;
+    height:350px;
+    color: hsl(0, 0%, 100%);
+    background-color: black;
+    padding: 30px;
+    border: solid 11px, rgb(237, 247, 94);
+    position: absolute;
+    bottom: 10px;
+    right: 120px;
+    
+}
+.modal-form p {
+    margin: 5px 0 15px 0;
+}
+.modal-form h3 {
+    font-size: 24px;
+}
+.form-input {
+    border: 3px solid pink;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #390d15;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.modal-form label {
+    margin: 0 5px;
+}
+.modal-form button {
+    color: #000000;
+    background-color: rgb(237, 247, 94);
+    border: solid pink 3px;
+    font-size: 16px;
+
+}
+
 footer {
-    background: #ffff14;
+    background: rgb(237, 247, 94);
     width: 100%;
     padding: 40px 35px;
 }
