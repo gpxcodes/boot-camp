@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,4 +47,26 @@ header h1 {
     font-size: 36px;
     color: #e22222;
     display: inline;
+}
+footer {
+    background: #ffff14;
+    width: 100%;
+    padding: 40px 35px;
+}
+footer h2 {
+    display: inline;
+    color: #e22222;
+    font-size: 30px;
+    margin: 0;
+}
+footer div {
+    float: right;
+    line-height: 1.5;
+    text-align: left;
+}
+footer a {
+    color: aqua;
+}
+section {
+    padding: 60px;
 }
