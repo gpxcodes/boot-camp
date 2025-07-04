@@ -9,7 +9,7 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: rgba(138, 130, 130, 0.921);
+  background-color: rgba(191, 155, 155, 0.921);
 }
 
 header {
@@ -90,6 +90,24 @@ header h1 {
     border: solid pink 3px;
     font-size: 16px;
 
+}
+.goose {
+    text-align: center;
+}
+.goose h2 {
+    font-size: 55px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    padding: 0 100px 20px 100px;
+    border-bottom: 6px solid rgb(237, 247, 94);
+    display: inline-block;
+}
+.goose p {
+    line-height: 1.4;
+    color: black;
+    width: 77%;
+    font-size: 20px;
+    margin: 0 auto;
 }
 
 footer {
