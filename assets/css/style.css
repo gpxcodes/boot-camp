@@ -1,5 +1,10 @@
 
 /* I'm a CSS comment! */
+:root {
+    --primary-color: #fdff90;
+    --secondary-color: #f1c6f0;
+    --tertiary-color: #aca6d8;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,20 +13,25 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: #f1c6f0;
+  background-color: var(--secondary-color);
 }
 /* header nav start */
 header {
     padding: 10px 15px 20px 25px;
-    background-color: rgb(237, 247, 94);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 header h1 {
     font-weight: bold;
     font-size: 36px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #000000;
     margin: 0;
     /* display: inline; */
@@ -44,14 +54,21 @@ header nav {
     list-style: none;
  }
 header nav ul li a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
 }
+header nav ul li a:hover {
+  background: var(--tertiary-color);
+  color: white;
+  border-radius: 15px;
+  text-shadow: none;
+}
 /* header end */
 /* footer start */
 footer {
-    background: rgb(237, 247, 94);
+    background: var(--primary-color);
     width: 100%;
     padding: 40px 35px;
     display: flex;
@@ -68,7 +85,7 @@ footer div {
     text-align: right;
 }
 footer a {
-    color: rgb(255, 0, 0);
+    color: var(--tertiary-color);
 }
 /* footer style end */
 
@@ -76,7 +93,7 @@ section {
     padding: 60px;
 }
 .modal {
-    color: rgb(237, 247, 94);
+    color: var(--primary-color);
     /* height: 400px;
     position: relative; */
     display: flex;
@@ -97,15 +114,21 @@ section {
     font-style: italic;
     font-size: 40px;
     color: rgb(73, 74, 125);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
 .modal-form {
     color: hsl(0, 0%, 100%);
     width: 40%;
     margin: 3.5%;
-    background-color: black;
+    background-color: var(--tertiary-color);
     padding: 30px;
-    border: solid 11px, rgb(237, 247, 94);
+    border: solid 10px, rgb(65, 67, 39);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.modal-form button:hover {
+  background-color: #d91ea4;  
 }
 
 .modal-form h3 {
@@ -116,39 +139,102 @@ section {
     margin: 5px 0 15px 0;
 }
 .form-input {
-    border: 3px solid pink;
+    border: 3px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #390d15;
+    color: var(--primary-color);
     width: 100%;
     margin-bottom: 5px;
+    border-radius: 15px;
+    background-color: rgba(227, 227, 227, 0.75);
+}
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgb(15, 13, 13); 
+  outline: none;
 }
 .modal-form label {
     margin: 0 5px;
 }
 .modal-form button {
     color: #000000;
-    background-color: rgb(237, 247, 94);
-    border: solid pink 1px;
+    background-color: var(--primary-color);
+    border: solid var(--secondary-color) 1px;
     font-size: 22px;
     padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
+}
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: var(--primary-color);  
+  border: 1px solid var(--tertiary-color);  
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, var(--secondary-color), #6d00a4);
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid #024e76;
+  border-bottom: 2px solid var(--secondary-color);
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
 }
 .section-title {
     font-size: 48px;
     color: #000000;
     border-bottom: 6px solid;
-    border-color: rgb(237, 247, 94);
+    border-color: var(--primary-color);
     padding-bottom: 20px;
     text-align: center;
     margin: 0 auto 35px auto;
     width: 50%;
 }
 .primary-border {
-    border-color:rgb(237, 247, 94);
+    border-color:var(--primary-color);
 }
 .secondary-border {
-    border-color: rgb(237, 247, 94);
+    border-color: var(--primary-color);
 }
 
 .goose p {
@@ -166,11 +252,14 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+.option:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
 }
 .option-text {
     flex: 12;
@@ -214,7 +303,7 @@ section {
 .product {
     margin: 20px;
     flex: 1;
-    background: rgb(190, 74, 163);
+    background: #aca6d8;
     color: rgb(243, 243, 243); 
 }
 .product img {
@@ -276,6 +365,12 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 15px;
+    background-color: rgba(15, 15, 15, 0.75);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 .contact-form button {
     width: 100%;
@@ -284,6 +379,11 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 15px;
+}
+.contact-form button:hover {
+  color: #aca6d8;
+  background: #d91ea4;
 }
 .contact-info a {
     color: white;

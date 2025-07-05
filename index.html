@@ -58,18 +58,24 @@
                 <label for="phone">phone number:</label>
                 <input type="tel" placeholder="your phone number" name="phone" id="phone" class="form-input"/>
                <p> 
-                Would you like to receive the 411? 
-                <input type="radio" name="contact-confirm" id="contact-yes" />
-                <label for="contact-yes">yes</label>
+                are you an adult? 
+                <span class="radio-wrapper">
+                    <input type="radio" name="contact-confirm" id="contact-yes" />
+                    <label for="contact-yes">yes</label>
+                </span>
+                <span class="radio-wrapper">
                 <input type="radio" name="contact-confirm" id="contact-no" />
-                <label for="contact-no">nope, try some other way</label>
-               </p>
-               <p>
-               <label for="checkbox"> 
-             I accept to receive emails from goose 
-            </label>  
-                <input type="checkbox" id="checkbox" name="age-confirm"/>
+                <label for="contact-no">no</label>
+             </span>  
             </p>
+
+               <p>
+                <span class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox" name="age-confirm"/>
+                <label for="checkbox"> I accept to receive emails from goose </label>  
+                </span>
+                </p>
+
             <button type="submit">
                 Submit!
             </button>
