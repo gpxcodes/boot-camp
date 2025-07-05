@@ -50,7 +50,8 @@ header nav {
     list-style: none;
  }
 header nav ul li a {
-    margin: 0 30px;
+    /* margin: 0 30px; */
+    padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
 
@@ -89,20 +90,21 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 .modal-cta {
     width: 35%;
-    text-align: right;
+    text-align: center;
     margin: 3.5%;
     color: #b28787;
-    font-size: 22px;
+    font-size: 20px;
   
-    line-height: 1.3;
+    line-height: 1.2;
 }
 .modal h2 {
     font-style: italic;
-    font-size: 44px;
-    color: aqua;
+    font-size: 40px;
+    color: rgb(73, 74, 125);
 
 }
 .modal-form {
@@ -210,13 +212,8 @@ section {
 .option-img img {
     max-width: 100%;
 }
-
-
-
-
-
 .section-title {
-    font-size: 55px;
+    font-size: 48px;
     color: #000000;
     /* margin-bottom: 20px;
     padding: 0 100px 20px 100px; */
@@ -292,6 +289,42 @@ section {
 }
 .contact h2 {
     color: rgb(0, 0, 0);
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 900px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+    .modal-cta, .modal-form {
+        width: 100%;
+    }
+    .modal-cta {
+        text-align: center;
+    }
+    .section-title {
+        width: 80%;
+    }
+    .product {
+        flex: 0 70%;
+    }
 }
 
 
