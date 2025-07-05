@@ -1,16 +1,16 @@
-# Run Buddy
+# BOOT CAMP
 
 ## Purpose
-A website that offers fitness training services.
+A website 
 
 ## Built With
 * HTML
 * CSS
 
 ## Website
-https://lernantino.github.io/run-buddy/
+
 
 ## Contribution
-Made with ❤️ by [your name]
+Made with ❤️
 
-### ©️2019 Run Buddy, Inc
+### ©️2019 TBD, Inc
