@@ -18,10 +18,14 @@ header {
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 header h1 {
     font-weight: bold;
     font-size: 36px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #000000;
     margin: 0;
     /* display: inline; */
@@ -44,9 +48,16 @@ header nav {
     list-style: none;
  }
 header nav ul li a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+}
+header nav ul li a:hover {
+  background: #aca6d8;
+  color: #2bf751;
+  border-radius: 15px;
+  text-shadow: none;
 }
 /* header end */
 /* footer start */
@@ -97,15 +108,21 @@ section {
     font-style: italic;
     font-size: 40px;
     color: rgb(73, 74, 125);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
 .modal-form {
     color: hsl(0, 0%, 100%);
     width: 40%;
     margin: 3.5%;
-    background-color: black;
+    background-color: #aca6d8;
     padding: 30px;
-    border: solid 11px, rgb(237, 247, 94);
+    border: solid 10px, rgb(65, 67, 39);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.modal-form button:hover {
+  background-color: #d91ea4;  
 }
 
 .modal-form h3 {
@@ -120,9 +137,16 @@ section {
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #390d15;
+    color: #fdff90;
     width: 100%;
     margin-bottom: 5px;
+    border-radius: 15px;
+    background-color: rgba(175, 175, 175, 0.75);
+}
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgb(15, 13, 13); 
+  outline: none;
 }
 .modal-form label {
     margin: 0 5px;
@@ -133,6 +157,7 @@ section {
     border: solid pink 1px;
     font-size: 22px;
     padding: 10px 20px;
+    border-radius: 15px;
 }
 .section-title {
     font-size: 48px;
@@ -166,11 +191,14 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+.option:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
 }
 .option-text {
     flex: 12;
@@ -214,7 +242,7 @@ section {
 .product {
     margin: 20px;
     flex: 1;
-    background: rgb(190, 74, 163);
+    background: #aca6d8;
     color: rgb(243, 243, 243); 
 }
 .product img {
@@ -276,6 +304,12 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 15px;
+    background-color: rgba(15, 15, 15, 0.75);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 .contact-form button {
     width: 100%;
@@ -284,6 +318,11 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 15px;
+}
+.contact-form button:hover {
+  color: #aca6d8;
+  background: #d91ea4;
 }
 .contact-info a {
     color: white;
